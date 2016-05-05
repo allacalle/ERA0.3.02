@@ -30,8 +30,6 @@ public class TestClassFormula extends InstrumentationTestCase
 
     public void testMenosSimple () throws Exception
     {
-        //final int expected = 1;
-        //final int reality = 5;
         String expected = "Child-Pugh";
         String reality = "" ;
         String idFormula ="";
@@ -46,7 +44,6 @@ public class TestClassFormula extends InstrumentationTestCase
         expected = "escala";
         reality = formulaActual.getTipoFormula() ;
         assertEquals(expected, reality);
-
 
     }
 
