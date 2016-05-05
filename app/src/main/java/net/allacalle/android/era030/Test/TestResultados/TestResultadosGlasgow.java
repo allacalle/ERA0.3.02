@@ -7,4 +7,5 @@ import android.test.InstrumentationTestCase;
  */
 public class TestResultadosGlasgow extends InstrumentationTestCase
 {
+    //Esto aun no hace nada
 }
