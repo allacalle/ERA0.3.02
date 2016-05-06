@@ -8,14 +8,14 @@ import net.allacalle.android.era030.Formula;
 /**
  * Created by Alfonso on 06/05/2016.
  */
-public class TestBUN extends InstrumentationTestCase {
+public class TestAguaLibreExceso extends InstrumentationTestCase {
 
-    public void testResultadoBUN () throws Exception
+    public void testResultadoAguaLibreExceso () throws Exception
     {
         double expected ;
         double reality ;
         String idFormula ="";
-        idFormula = "9";
+        idFormula = "11";
         //IMPORTANTE como llamar al contexto desde el TEST
         Context context = this.getInstrumentation().getTargetContext().getApplicationContext();
         final Formula formulaActual = new Formula(idFormula, context);
@@ -23,15 +23,17 @@ public class TestBUN extends InstrumentationTestCase {
 
         //Asignamos los valores que se han introducido por la pantalla
 
-        //Que usa el siguiente vector 60;1;0;1;0;1;0;0
-        String vectorResultados [] = new String[1];
-        vectorResultados[0] = "100";
+        //Que usa el siguiente vector 80,60,136
+        String vectorResultados [] = new String[3];
+        vectorResultados[0] = "60";
+        vectorResultados[1] = "80";
+        vectorResultados[2] = "136";
 
         formulaActual.introducirValoresFormula(vectorResultados);
 
         formulaActual.calcularFormula();
 
-        expected = 46.73;
+        expected = 1.37;
         reality = Float.parseFloat(formulaActual.getResultado().getValor()) ;
 
         //Ahora lo redondeamos para que sea como expected

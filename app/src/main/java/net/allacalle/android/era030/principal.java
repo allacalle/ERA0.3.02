@@ -381,7 +381,7 @@ public class principal extends AppCompatActivity {
 //Agua Libre, Exceso
 
 //Formula
-                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('11','Agua Libre,Exceso ','Agua Libre,Exceso','general','(Agua/100)*Peso*(1-Sodio/140)');");
+                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('11','Agua Libre,Exceso ','Agua Libre,Exceso','general','(Agua/100)*Peso*(1-(Sodio/140))');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('84','Agua','11','numero','%','0','100');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('85','Peso','11','numero','kg','25','400');");
