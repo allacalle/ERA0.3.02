@@ -63,9 +63,9 @@ public class principal extends AppCompatActivity {
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo) VALUES ('1','Child-Pugh','Child-Pugh','escala');");
 
 //Parametros
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('1','Billirumina','1','numero','mg/100 ml','0','200');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('2','Albumina serica','1','numero','g/l','0','500');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('3','Tiempo de protombina','1','numero','segundos','1','1000');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('1','Billirumina','1','numero','mg/100 ml','0','150');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('2','Albumina serica','1','numero','g/l','0','100');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('3','Tiempo de protombina','1','numero','segundos','0','100');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro)  VALUES ('4','Ascitis','1','lista');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro)  VALUES ('5','Encefalopatia de origen hepatico','1','lista');");
 
@@ -370,7 +370,7 @@ public class principal extends AppCompatActivity {
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('79','Edad','10','numero','años','0','120');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('80','Peso','10','numero','kg','25','400');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('81','Crp','10','numero','mg/dl','1','300');");                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro)  VALUES ('82','Sexo','10','lista');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('81','Crp','10','numero','mg/dl','0','10');");                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro)  VALUES ('82','Sexo','10','lista');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('83','Aclaramiento de la creatinina','10','resultado','ml/min');");
 //Criterios de puntuación
@@ -417,7 +417,7 @@ public class principal extends AppCompatActivity {
 //Formula
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('14','Superficie Corporal Total','Superficie Corporal Total','general','(Peso^0.425/Estatura^0.725) * 0.007184');");
 //Parámetros
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('97','Peso','14','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('97','Peso','14','numero','kg','25','400');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('98','Estatura','14','numero','cm','100','250');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('99','Superficie Corporal Total','14','resultado','metros cuadrados');");
@@ -428,7 +428,7 @@ public class principal extends AppCompatActivity {
 //Formula
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('15','Gasto de Energía Basal','Gasto de Energía Basal','general','');");
 //Parámetros
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('100','Peso','15','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('100','Peso','15','numero','kg','25','400');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('101','Estatura','15','numero','cm','100','250');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('102','Edad','15','numero','años','0','120');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro)  VALUES ('103','Sexo','15','lista');");
@@ -446,7 +446,7 @@ public class principal extends AppCompatActivity {
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)VALUES ('105','Sodio','16','numero','mEq/l','80','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('106','Potasio','16','numero','mEq/l','0','20');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('107','Glucemia','16','numero','mg/dl','0','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('107','Glucemia','16','numero','mg/dl','0','1000');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('108','Urea','16','numero','mg/dl','0','1000');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('109','Osmolaridad','16','resultado','mOsm/l');");
@@ -457,7 +457,7 @@ public class principal extends AppCompatActivity {
 //Formula
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('17','Agua Corporal Total','Agua Corporal Total','general','(Agua/100)*Peso');");
 //Parámetros
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('110','Peso','17','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('110','Peso','17','numero','kg','25','400');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('111','Agua','17','numero','%','0','100');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('112','Agua corporal total','17','resultado','l');");
@@ -471,7 +471,7 @@ public class principal extends AppCompatActivity {
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('113','Bicarbonato_medido','18','numero','mEq/l','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('114','Bicarbonato_deseado','18','numero','mEq/l','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('115','Bicarbonato_VD','18','numero','%','0','100');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('116','Peso','18','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('116','Peso','18','numero','kg','25','400');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('117','Bicarbonato exceso','18','resultado','mEq');");
 
@@ -484,7 +484,7 @@ public class principal extends AppCompatActivity {
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('118','Bicarbonato_medido','19','numero','mEq/l','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('119','Bicarbonato_deseado','19','numero','mEq/l','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('120','Bicarbonato_VD','19','numero','%','0','100');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('121','Peso','19','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('121','Peso','19','numero','kg','25','400');");
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('122','Bicarbonato deficit','19','resultado','mEq');");
 
@@ -495,7 +495,7 @@ public class principal extends AppCompatActivity {
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('20','Gradiente Alveolo arterial de oxigeno','Gradiente A-a de O2','general',' ((Fraccion_inspirada_de_oxigeno/100)*(Presion_barometrica- Vapor_de_agua)) – (Tension_arterial_de_CO2/Cociente_respiratorio) – Tension_arterial_de_Oxigeno');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('123','Fraccion_inspirada_de_oxigeno','20','numero','fraccion','0','1');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('124','Presion_barometrica','20','numero','mmHg','0','760');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('124','Presion_barometrica','20','numero','mmHg','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('125','Vapor_de_agua','20','numero','mmHg','0','150');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('126','Cociente_respiratorio','20','numero','fraccion','0','1');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('127','Tension_arterial_de_CO2','20','numero','mmHg','0','200');");
@@ -521,14 +521,14 @@ public class principal extends AppCompatActivity {
                 db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('22','Cálculo de la insulinizacion: dosis de insulina (DI) al día.','Dosis de insulina al día','general','');");
 //Parámetros
 //Parametro en blanco
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('134','Peso','22','numero','kg','25','300');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('134','Peso','22','numero','kg','25','400');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('135','Edad','22','lista','años','0','120');");
 
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('136','Dosis de insulina','22','resultado','Unidades de insulina');");
 //Criterios de puntuación
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('131','135','Joven','0.3*peso');");
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('132','135','Edad avanzada','0.5*peso');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('131','135','Joven','0.5*peso');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('132','135','Edad avanzada','0.3*peso');");
 
             }
         }
