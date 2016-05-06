@@ -357,7 +357,7 @@ public class principal extends AppCompatActivity {
 //BUN:Creatinina (S) relación
 
 //Formula
-                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo) VALUES ('9','BUN:Creatinina (S) relación ','BUN','general');");
+                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('9','BUN:Creatinina (S) relación ','BUN','general','Urea/2.14');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('77','Urea','9','numero','mg','0','1000');");
 //Resultado
