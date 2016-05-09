@@ -479,7 +479,7 @@ public class principal extends AppCompatActivity {
 //Bicarbonato, Deficit
 
 //Formula
-                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('19','Bicarbonato,Deficit','Bicarbonato,Deficit','general','Peso*(Bicarbonato_VD/100)*( Bicarbonato_deseado – Bicarbonato_medido )');");
+                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('19','Bicarbonato,Deficit','Bicarbonato,Deficit','general','Peso*(Bicarbonato_VD/100)*( Bicarbonato_deseado - Bicarbonato_medido )');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('118','Bicarbonato_medido','19','numero','mEq/l','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('119','Bicarbonato_deseado','19','numero','mEq/l','0','200');");
@@ -492,16 +492,16 @@ public class principal extends AppCompatActivity {
 //Gradiente A-a de O2
 
 //Formula
-                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('20','Gradiente Alveolo arterial de oxigeno','Gradiente A-a de O2','general',' ((Fraccion_inspirada_de_oxigeno/100)*(Presion_barometrica- Vapor_de_agua)) – (Tension_arterial_de_CO2/Cociente_respiratorio) – Tension_arterial_de_Oxigeno');");
+                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('20','Gradiente Alveolo arterial de oxigeno','Gradiente A-a de O2','general',' ((Fraccion_inspirada_de_oxigeno/100)*(Presion_barometrica - Vapor_de_agua)) - (Tension_arterial_de_CO2/Cociente_respiratorio) - Tension_arterial_de_Oxigeno');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('123','Fraccion_inspirada_de_oxigeno','20','numero','fraccion','0','1');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('124','Presion_barometrica','20','numero','mmHg','0','200');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('125','Vapor_de_agua','20','numero','mmHg','0','150');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('126','Cociente_respiratorio','20','numero','fraccion','0','1');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('127','Tension_arterial_de_CO2','20','numero','mmHg','0','200');");
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('129','Tension_arterial_de_Oxigeno','20','numero','mmHg','0','760');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('128','Tension_arterial_de_Oxigeno','20','numero','mmHg','0','760');");
 //Resultado
-                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('130','Gradiente A-a de O2 ','20','resultado','mmHg');");
+                db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('129','Gradiente A-a de O2 ','20','resultado','mmHg');");
 
 
 //Tension Inspirada de Oxígeno
@@ -527,8 +527,8 @@ public class principal extends AppCompatActivity {
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('136','Dosis de insulina','22','resultado','Unidades de insulina');");
 //Criterios de puntuación
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('131','135','Joven','0.5*peso');");
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('132','135','Edad avanzada','0.3*peso');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('131','135','Joven','0.5*Peso');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('132','135','Edad avanzada','0.3*Peso');");
 
             }
         }
