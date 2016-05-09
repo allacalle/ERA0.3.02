@@ -415,7 +415,7 @@ public class principal extends AppCompatActivity {
 //Superficie Corporal Total
 
 //Formula
-                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('14','Superficie Corporal Total','Superficie Corporal Total','general','(Peso^0.425/Estatura^0.725) * 0.007184');");
+                db.execSQL("INSERT INTO Formulas (IdFormula,NombreCompleto,Abreviatura,Tipo,Expresion) VALUES ('14','Superficie Corporal Total','Superficie Corporal Total','general','(Peso^0.425*Estatura^0.725) * 0.007184');");
 //Parámetros
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo) VALUES ('97','Peso','14','numero','kg','25','400');");
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida,Minimo,Maximo)  VALUES ('98','Estatura','14','numero','cm','100','250');");
@@ -435,8 +435,8 @@ public class principal extends AppCompatActivity {
 //Resultado
                 db.execSQL("INSERT INTO Parametros (IdParametro,NombreParametro,IdFormula,TipoParametro,Medida)  VALUES ('104','Gasto de energía basal','15','resultado','Kcal/dia');");
 //Criterios de puntuación
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('129','103','Hombre','66.47 +(13.75*Peso) + (5.00*Estatura) -(6.76*Edad) ');");
-                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('130','103','Mujer','65.51 + (9.56 *Peso) + (1.85*Estatura) – (4.68*Edad)');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('129','103','Hombre','66.47 +(13.75*Peso) + (5.00*Estatura)-(6.76*Edad) ');");
+                db.execSQL("INSERT INTO CriteriosPuntuacion (IdCriterioPuntuacion,IdParametro,Criterio,Puntuacion) VALUES ('130','103','Mujer','65.51+(9.56 *Peso) + (1.85*Estatura)-(4.68*Edad)');");
 
 
 //Osmolaridad calculada
