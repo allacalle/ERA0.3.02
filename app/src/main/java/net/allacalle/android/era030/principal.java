@@ -15,9 +15,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.security.Principal;
 
-public class principal extends AppCompatActivity {
+public class Principal extends AppCompatActivity {
 
     boolean bdVacia ;
 
@@ -582,7 +581,7 @@ public class principal extends AppCompatActivity {
                 if (bdVacia)
                 {
                     Intent intent =
-                            new Intent(principal.this, Encuesta.class);
+                            new Intent(Principal.this, Encuesta.class);
 
                     startActivity(intent);
 
@@ -592,7 +591,7 @@ public class principal extends AppCompatActivity {
                 else {
 
                     Intent intent =
-                            new Intent(principal.this, Inicio.class);
+                            new Intent(Principal.this, Inicio.class);
 
                     startActivity(intent);
                 }
