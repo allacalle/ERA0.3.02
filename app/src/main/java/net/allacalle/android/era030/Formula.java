@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by Alfonso on 20/10/2015.
  */
@@ -471,6 +474,44 @@ EFECTOS: Devuelve en una cadena el tipo de Formula. Los tipos pueden ser dos: es
                     break;
             }
         }
+
+        return true;
+    }
+
+    public boolean introducirRecientes (String idFormula, String resultado,  Context context)
+    {
+
+        //Abrir la base de datos y buscar la formula que coincide con la id .
+
+        FormulasSQLiteHelper usdbh =
+                new FormulasSQLiteHelper(context ,"DbEra", null, 1);
+        SQLiteDatabase db = usdbh.getWritableDatabase();
+
+        //vemos si hay una formula con esa id
+        Cursor c = db.rawQuery("SELECT COUNT (IdFormula) FROM Recientes  WHERE IdFormula = '" + idFormula + "'  ", null);
+        c.moveToFirst();
+        //Cogemos el identificador de la formula
+        int numeroFormulas = c.getInt(0);
+        c.close();
+
+        //Cogemos la fecha del sistema y le ponemos en formato dd/mm/aaaa hora:minuto:segundo
+        SimpleDateFormat curFormater = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+//Si existe la borramos e insertamos la id con la fecha actual en la tabla Recientes
+        if (numeroFormulas != 0 ) {
+            db.execSQL("DELETE FROM Recientes WHERE IdFormula = '" + idFormula + "' ;");
+            db.execSQL("INSERT INTO Recientes (IdFormula,Fecha,Resultado)  VALUES ('"+ idFormula +"','"+ curFormater.format(date) +"','"+ resultado +"' );");
+
+        }
+        //Sino insertamos la id con la fecha actual en la tabla Recientes
+        else
+        {
+            db.execSQL("INSERT INTO Recientes (IdFormula,Fecha,Resultado)  VALUES ('"+ idFormula +"','"+ curFormater.format(date) +"','"+ resultado +"' );");
+        }
+
+        c.close();
+        db.close();
+
 
         return true;
     }

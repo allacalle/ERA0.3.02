@@ -13,7 +13,7 @@ public class FormulasSQLiteHelper extends SQLiteOpenHelper {
     String sqlCreateParametro = "CREATE TABLE Parametros (IdParametro INTEGER, NombreParametro TEXT, IdFormula Integer, TipoParametro TEXT, Medida TEXT,Minimo Integer, Maximo Integer) ";
     String sqlCreateCriteriosPuntuacion = "CREATE TABLE CriteriosPuntuacion(IdCriterioPuntuacion Integer, IdParametro Integer, Criterio TEXT, Puntuacion TEXT)";
     String sqlCreatePrioridad = "CREATE TABLE Prioridad(IdPrioridad INTEGER, IdFormula INTEGER, Tipo TEXT)";
-    String sqlCreateRecientes = "CREATE TABLE Recientes(IdRecientes INTEGER, IdFormula INTEGER, Fecha TEXT)";
+    String sqlCreateRecientes = "CREATE TABLE Recientes(IdRecientes INTEGER, IdFormula INTEGER, Fecha TEXT, Resultado TEXT)";
 
 
 

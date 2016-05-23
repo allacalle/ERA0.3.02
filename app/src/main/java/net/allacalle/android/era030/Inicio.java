@@ -19,6 +19,7 @@ public class Inicio extends AppCompatActivity {
 
         //Buscamos nuestros botones de Alto,Medio, Bajo
 
+        Button BtnRecientes = (Button) findViewById(R.id.BtnRecientes) ;
         Button BtnAlta = (Button) findViewById(R.id.BtnAlta);
         Button BtnMedia = (Button) findViewById(R.id.BtnMedia);
         Button BtnBaja = (Button) findViewById(R.id.BtnBaja);
@@ -87,7 +88,19 @@ public class Inicio extends AppCompatActivity {
             }
         });
 
+        BtnRecientes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Creamos el Intent
+                Intent intent =
+                        new Intent(Inicio.this, Recientes.class);
 
+
+                //Iniciamos la nueva actividad
+                startActivity(intent);
+
+            }
+        });
 
 
 

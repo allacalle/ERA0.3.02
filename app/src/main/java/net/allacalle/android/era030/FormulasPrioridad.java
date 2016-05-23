@@ -3,6 +3,8 @@ package net.allacalle.android.era030;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -68,10 +70,31 @@ public class FormulasPrioridad extends AppCompatActivity {
 
         for( int i=0; i < numeroFormulas; i++ )
         {
+
+            //Creamos un objeto drawable para dar formato a los elementos auxiliares.
+            GradientDrawable drawable = new GradientDrawable();
+            drawable.setShape(GradientDrawable.RECTANGLE);
+            drawable.setStroke(5, Color.parseColor("#BDBDBD"));
+
+            switch (valorRecibido) {
+                case "Alta":
+                    drawable.setColor(Color.parseColor("#FF8A80"));
+                    break;
+                case "Media":
+                    drawable.setColor(Color.parseColor("#FFF59D"));
+                    break;
+                case "Baja":
+                    drawable.setColor(Color.parseColor("#CCFF90"));
+                    break;
+            }
+
+
             final Button boton = new Button(this);
             boton.setText(cursorPrioridad.getString(1));
             boton.setId(cursorPrioridad.getInt(0));
             cursorPrioridad.moveToNext();
+            //Le aplico el layout
+            boton.setBackgroundDrawable(drawable);
             lm.addView(boton);
 
             boton.setOnClickListener(new View.OnClickListener() {

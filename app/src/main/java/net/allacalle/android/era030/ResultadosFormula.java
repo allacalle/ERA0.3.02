@@ -152,6 +152,8 @@ public class ResultadosFormula extends AppCompatActivity {
         textoResultado.setTextSize(30);
         lm.addView(textoResultado);
 
+        formulaActual.introducirRecientes(idFormula, formulaActual.getResultado().getValor(), getApplicationContext());
+
         /* Despues de introducir los valores podemos decir que
          - Para formulas generales:
             - Tipo numero: Son los valores que se aplicarán a los parametros para resolver la formula.
